@@ -1,0 +1,422 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
+
+/*** VARIABLES ***/
+
+/* TEXTE | BLEU-NOIR*/
+$couleur-texte-courant: #27313a;
+/* TEINTES CLAIRES | GRIS */
+$couleur-teintes-claires: #cecdc3;
+/* ACCENT LÉGER | BEIGE */
+$couleur-accent-leger: #f2edc0;
+/* COULEUR PRINCIPALE | GRIS */
+$couleur-principale: #9b9782;
+/* TOUCHE SOMBRE | BLEU-GRIS */
+$couleur-touche-sombre: #31424a;
+/* NUANCES SOMBRES | BOURGOGNE */
+$couleur-nuances-sombres: #6c383d;
+/* POLICE DES TITRES */
+$police-titres: "Oswald";
+/* POLICE DU TEXTE */
+$police-texte-courant: "Source Sans 3";
+/* TAILLE DE LA POLICE */
+$police-taille-defaut: 1.2rem;
+/* INTERLIGNAGE */
+$police-interlignage-defaut: 1.2rem;
+
+/* CLASSES À RÉUTILISER */
+%titres {
+  font-family: $police-titres;
+  color: $couleur-texte-courant;
+}
+
+%texte-normal {
+  font-family: $police-texte-courant;
+  color: $couleur-texte-courant;
+}
+
+/* CONTAINER */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* HEADER */
+header {
+  background-color: $couleur-principale;
+  @extend %titres;
+  img {
+    width: 40%;
+    padding: 0.5rem 0 0.5rem 0;
+  }
+}
+.flex-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  max-width: 30%;
+}
+
+/* NAVIGATION */
+nav {
+  display: flex;
+  ul {
+    padding: 0;
+    li {
+      display: inline;
+      a {
+        display: inline-block;
+        text-decoration: none;
+        @extend %titres;
+        font-size: 1.3rem;
+        margin: 1rem;
+        padding: 4px 7px;
+        &:hover {
+          background-color: $couleur-teintes-claires;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+}
+
+/* FOOTER */
+footer {
+  background-color: $couleur-nuances-sombres;
+  position: sticky;
+  bottom: 0;
+  p {
+    color: white;
+    font-family: $police-texte-courant;
+    font-size: $police-taille-defaut;
+    text-align: center;
+    padding: 1rem 0 1rem 0;
+  }
+  i {
+    color: white;
+    font-size: 2rem;
+  }
+}
+.arrow {
+  position: fixed;
+  bottom: 4rem;
+  right: 3rem;
+}
+
+/* MAIN */
+main {
+  background-color: $couleur-touche-sombre;
+  padding-bottom: 1rem;
+  img {
+    width: 100%;
+  }
+}
+.main-eval {
+  padding: 1rem 0;
+}
+
+/* BANNIÈRE HERO */
+#hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    position: relative;
+    z-index: 1;
+  }
+  p {
+    line-height: 3.8rem;
+    position: absolute;
+    font-size: 3.8rem;
+    font-weight: bolder;
+    z-index: 2;
+    padding: 1rem;
+    @extend %titres;
+    text-align: center;
+    border-radius: 10px;
+    background-color: rgba($color: $couleur-teintes-claires, $alpha: 0.6);
+    text-shadow: 3px 3px 3px $couleur-accent-leger;
+  }
+}
+
+/* INTRODUCTION */
+#intro {
+  display: flex;
+  justify-content: space-between;
+  background-color: $couleur-principale;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 3px solid $couleur-teintes-claires;
+  border-radius: 10px;
+  div {
+    h2 {
+      @extend %titres;
+      padding: 0 1rem 0 1rem;
+      &:after {
+        content: "!";
+      }
+    }
+    p {
+      @extend %texte-normal;
+      font-size: $police-taille-defaut;
+      padding: 0 1rem 0 1rem;
+      text-align: justify;
+      &:before {
+        content: ">";
+      }
+    }
+  }
+}
+
+/* TABLE DES TOP 5 FILMS */
+table {
+  background-color: $couleur-principale;
+  border: 3px solid $couleur-teintes-claires;
+  border-radius: 10px;
+  padding: 1rem;
+  border-top: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  th {
+    @extend %titres;
+    font-size: $police-taille-defaut;
+    border: 3px solid $couleur-touche-sombre;
+    background-color: $couleur-teintes-claires;
+    padding: 0.5rem 3rem 0.5rem 3rem;
+  }
+  td {
+    @extend %texte-normal;
+    font-size: $police-taille-defaut;
+    text-align: center;
+    border: 3px solid $couleur-touche-sombre;
+    background-color: $couleur-teintes-claires;
+  }
+}
+#movies {
+  display: flex;
+  justify-content: center;
+  h2 {
+    background-color: $couleur-principale;
+    margin: 0;
+    border-radius: 10px;
+    padding: 1rem;
+    @extend %titres;
+    border: 3px solid $couleur-teintes-claires;
+    border-bottom: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+iframe {
+  width: 100%;
+  height: 100%;
+}
+
+/* DESCRIPTIONS DE 6 SERIES */
+#series {
+  background-color: $couleur-principale;
+  border: 3px solid $couleur-teintes-claires;
+  border-radius: 10px;
+  margin-top: 1rem;
+  h3 {
+    @extend %titres;
+  }
+  p {
+    @extend %texte-normal;
+  }
+  h2 {
+    @extend %titres;
+    padding: 1rem 0 0 1rem;
+    font-size: 2rem;
+    margin-bottom: 0;
+  }
+}
+.grid-series {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  padding: 1rem 0 0rem 0;
+}
+.carte {
+  border: 3px solid $couleur-touche-sombre;
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 1rem;
+  background-color: white;
+  img {
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  display: inline-block;
+}
+.transition {
+  transition: background-color 1s, border-radius 1s;
+  &:hover {
+    background-color: $couleur-teintes-claires;
+    border-radius: 20px;
+  }
+}
+.transition2 {
+  transition: transform 1s ease, border-radius 1s;
+  &:hover {
+    transform: scale(1.05);
+    border-radius: 20px;
+  }
+}
+
+/* FORMULAIRE D'ÉVALUATION */
+.red-text {
+  color: red;
+}
+.titre-eval {
+  @extend %titres;
+  padding: 0.5rem;
+  font-size: 2rem;
+  background-color: $couleur-teintes-claires;
+  border: 3px solid $couleur-accent-leger;
+  text-align: center;
+  border-radius: 10px;
+}
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 96%;
+  padding: 1rem;
+  p {
+    @extend %titres;
+    font-size: $police-taille-defaut;
+  }
+}
+.age {
+  max-width: 20%;
+}
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 1rem 0 1rem 0;
+  legend {
+    border: 3px solid $couleur-accent-leger;
+    background-color: #cecdc3;
+    padding: 0.25rem 0.5rem;
+    @extend %titres;
+    font-size: $police-taille-defaut;
+    border-radius: 10px;
+  }
+  fieldset {
+    border-radius: 10px;
+    padding: 1rem;
+    border: 3px solid $couleur-accent-leger;
+    background-color: $couleur-teintes-claires;
+    margin: 1rem;
+    input {
+      border: 2px solid $couleur-touche-sombre;
+      border-radius: 10px;
+      @extend %texte-normal;
+      padding: 0.25rem 0.5rem;
+    }
+    select {
+      @extend input;
+    }
+    textarea {
+      @extend input;
+    }
+    label {
+      @extend %titres;
+      font-size: $police-taille-defaut;
+      padding: 0.25rem 0 0.25rem 0;
+    }
+    p {
+      padding: 0.25rem 0 0.25rem 0;
+      margin-bottom: 0.25rem;
+    }
+    textarea {
+      width: 96%;
+      @extend %texte-normal;
+    }
+    .envoi {
+      text-align: right;
+      input[type="submit"] {
+        margin-left: 1rem;
+        &:hover {
+          background-color: $couleur-nuances-sombres;
+          color: white;
+          border-color: white;
+        }
+      }
+    }
+    select {
+      @extend %texte-normal;
+    }
+  }
+}
+.eval-options {
+  @extend %texte-normal;
+}
+
+/* CLASSES GLOBALES */
+.grid-area-1x2 {
+  grid-row: span 2;
+}
+.padding-bottom {
+  padding-bottom: 0.25rem;
+}
+
+/* ACCESSIBILITÉ */
+.texte-pour-lecteur {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1200px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .grid-series {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 960px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .grid-series {
+    grid-template-columns: 1fr;
+  }
+  #intro {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  form {
+    grid-template-columns: 1fr;
+  }
+  .arrow {
+    bottom: 4rem;
+    right: 0.5rem;
+  }
+  table {
+    width: 100%;
+    th {
+      padding: 0.25rem;
+    }
+  }
+}
+@media screen and (max-width: 570px) {
+  #hero {
+    p {
+      font-size: 2rem;
+      line-height: 2rem;
+    }
+  }
+}

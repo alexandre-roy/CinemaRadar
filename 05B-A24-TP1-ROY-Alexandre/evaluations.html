@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="icon" href="img/favicon.ico" />
+    <title>Évaluations - CinémaRadar - CinémaRadar</title>
+  </head>
+
+  <body>
+    <header>
+      <a class="texte-pour-lecteur" href="main">Contenu principal</a>
+      <div class="flex-header container">
+        <div class="logo">
+          <a href="index.html"><img src="img/logo.png" alt="logo" /></a>
+          <h1 class="texte-pour-lecteur">CinémaRadar</h1>
+        </div>
+
+        <div>
+          <p class="texte-pour-lecteur" id="navDesc">
+            Navigation du site: Accueil, coups de coeur, films, séries,
+            nouveautés et évaluations
+          </p>
+
+          <nav aria-labelledby="navDesc">
+            <ul>
+              <li><a href="index.html">ACCUEIL</a></li>
+              <li><a href="#">COUPS DE COEUR</a></li>
+              <li><a href="#">FILMS</a></li>
+              <li><a href="#">SÉRIES</a></li>
+              <li><a href="#">NOUVEAUTVÉS</a></li>
+              <li><a href="evaluations.html">ÉVALUATIONS</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main class="main-eval">
+      <h2 class="titre-eval container">Évaluation d'un film / série</h2>
+      <p class="texte-pour-lecteur" id="formDesc">
+        Formulaire pour évaluer un film / série
+      </p>
+      <form
+        aria-labelledby="formDesc"
+        class="frm-grid container"
+        method="post"
+        id="frm-evaluation"
+        action="mailto:alexandre1roy@gmail.com"
+      >
+        <fieldset>
+          <legend>1. Renseignements sur l'utilisateur</legend>
+
+          <div class="info-grid">
+            <label for="txtnom">Nom <span class="red-text">*</span></label>
+            <input
+              title="Veuillez écrire votre nom"
+              type="text"
+              name="txtnom"
+              id="txtnom"
+              required
+            />
+          </div>
+
+          <div class="info-grid">
+            <label for="mailcourriel"
+              >Courriel <span class="red-text">*</span></label
+            >
+            <input
+              title="Veuillez écrire votre adresse courriel"
+              type="email"
+              name="mailcourriel"
+              id="mailcourriel"
+              placeholder="courriel@blabla.com"
+              required
+            />
+          </div>
+
+          <div class="info-grid">
+            <label for="nbrage">Âge <span class="red-text">*</span></label>
+            <input
+              title="Veuillez écrire votre âge"
+              class="age"
+              type="number"
+              name="nbrage"
+              id="nbrage"
+              min="5"
+              max="120"
+              required
+            />
+          </div>
+        </fieldset>
+
+        <fieldset class="grid-area-1x2">
+          <legend>2. Évaluation d'un titre</legend>
+          <div class="info-grid">
+            <label for="txtfilm"
+              >Titre du film / série <span class="red-text">*</span></label
+            >
+            <input
+              title="Veuillez écrire le titre du film é série"
+              type="text"
+              name="txtfilm"
+              id="txtfilm"
+              required
+            />
+          </div>
+
+          <div class="info-grid">
+            <label for="selcategorie"
+              >Catégorie <span class="red-text">*</span></label
+            >
+            <select name="selcategorie" id="selcategorie" required>
+              <option value="" selected disabled>
+                Veuillez choisir une catégorie
+              </option>
+              <option value="Film">Film</option>
+              <option value="Série">Série</option>
+            </select>
+          </div>
+
+          <div class="info-grid">
+            <p class="padding-bottom">Évaluation</p>
+            <div class="padding-bottom">
+              <input
+                type="radio"
+                name="eval"
+                id="exellent"
+                value="exellent"
+                checked
+              />
+              <label class="eval-options" for="exellent">Exellent</label>
+            </div>
+
+            <div class="padding-bottom">
+              <input type="radio" name="eval" id="tresbien" value="tresbien" />
+              <label class="eval-options" for="tresbien">Très bien</label>
+            </div>
+
+            <div class="padding-bottom">
+              <input type="radio" name="eval" id="bien" value="bien" />
+              <label class="eval-options" for="bien">Bien</label>
+            </div>
+
+            <div class="padding-bottom">
+              <input type="radio" name="eval" id="moyen" value="moyen" />
+              <label class="eval-options" for="moyen">Moyen</label>
+            </div>
+
+            <div class="padding-bottom">
+              <input type="radio" name="eval" id="navet" value="navet" />
+              <label class="eval-options" for="navet">C'est un navet!</label>
+            </div>
+
+            <div class="envoi">
+              <input type="reset" value="Supprimer" />
+              <input type="submit" value="Envoyer" />
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Commentaires</legend>
+
+          <div>
+            <label class="texte-pour-lecteur" for="txtcommentaires"
+              >Commentaires</label
+            >
+            <textarea
+              name="txtcommentaires"
+              maxlength="250"
+              id="txtcommentaires"
+              placeholder="Déposez vos commentaires sur le film ou la série ici (max 250 char.)"
+            ></textarea>
+          </div>
+        </fieldset>
+      </form>
+    </main>
+
+    <footer>
+      <p class="container">
+        Alexandre Roy | ©Copyright 2024 | 05B - Travail 1 | SASS, Animation CSS
+        et normes d'accessibilité
+      </p>
+      <a class="arrow" href="evaluations.html"
+        ><span class="texte-pour-lecteur">Retour en haut de la page</span
+        ><i class="bi bi-arrow-up-square"></i
+      ></a>
+    </footer>
+  </body>
+</html>

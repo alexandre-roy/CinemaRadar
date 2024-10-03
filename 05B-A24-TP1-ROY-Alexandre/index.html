@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="icon" href="img/favicon.ico" />
+    <title>Accueil - CinémaRadar</title>
+  </head>
+
+  <body>
+    <header>
+      <a class="texte-pour-lecteur" href="main">Contenu principal</a>
+      <div class="flex-header container">
+        <div class="logo">
+          <a href="index.html"><img src="img/logo.png" alt="logo" /></a>
+          <h1 class="texte-pour-lecteur">CinémaRadar</h1>
+        </div>
+
+        <div>
+          <p class="texte-pour-lecteur" id="navDesc">
+            Navigation du site: Accueil, coups de coeur, films, séries,
+            nouveautés et évaluations
+          </p>
+
+          <nav aria-labelledby="navDesc">
+            <ul>
+              <li><a href="index.html">ACCUEIL</a></li>
+              <li><a href="#">COUPS DE COEUR</a></li>
+              <li><a href="#">FILMS</a></li>
+              <li><a href="#">SÉRIES</a></li>
+              <li><a href="#">NOUVEAUTVÉS</a></li>
+              <li><a href="evaluations.html">ÉVALUATIONS</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="hero">
+        <p class="container">VOTRE BOUSSOULE DANS L'UNIVERS DU CINÉMA</p>
+        <img src="img/popcorn.png" alt="hero-popcorn" />
+      </section>
+
+      <section id="intro" class="container">
+        <div>
+          <h2>À propos de nous</h2>
+          <p>
+            CinémaRadar est un site web dédié aux amateurs de cinéma et de
+            séries, offrant des informations détaillées sur les films, les
+            acteurs et les critiques. Les utilisateurs peuvent explorer des
+            bases de données complètes, consulter des critiques professionnelles
+            et des avis de la communauté, et découvrir des recommandations
+            personnalisées. Avec une interface conviviale, CinémaRadar facilite
+            la recherche de films et de séries, ainsi que le suivi des dernières
+            sorties et des tendances du divertissement.
+          </p>
+        </div>
+
+        <div>
+          <h2>Top 5</h2>
+          <p>
+            Sur CinémaRadar, les top 5 films sont élaborés en se basant sur une
+            combinaison de critères tels que les évaluations des utilisateurs,
+            les critiques des experts, et les tendances actuelles. Les listes,
+            basés sur la popularité, sont mises à jour régulièrement pour
+            refléter les nouveautés et les changements dans les préférences des
+            spectateurs. Chaque top 5 est accompagné de bande annonces, pour
+            aider les utilisateurs à découvrir les films les plus appréciés et
+            les plus pertinents.
+          </p>
+        </div>
+      </section>
+
+      <section id="movies" class="container">
+        <div>
+          <h2>Meilleurs films de l'année</h2>
+          <p class="texte-pour-lecteur" id="tblDesc">
+            Tableau de 4 colones et 5 rangs qui illustrent les top 5 films en
+            ordre avec une bande-annonce et une date de sortie. Les films sont
+            en ordre du plus populaire au moins populaire
+          </p>
+          <table aria-describedby="tblDesc">
+            <caption class="texte-pour-lecteur">
+              Tableau top 5
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">Titre</th>
+                <th scope="col">Date de sortie</th>
+                <th scope="col">Rang</th>
+                <th scope="col">Bande annonce</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Beetlejuice Beetlejuice</th>
+                <td>6 septembre 2024</td>
+                <td>1</td>
+                <td>
+                  <iframe
+                    width="250"
+                    src="https://www.youtube.com/embed/As-vKW4ZboU?si=BjNnqWIfuUxzlgM7"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">The Deliverance</th>
+                <td>16 août 2024</td>
+                <td>2</td>
+                <td>
+                  <iframe
+                    width="250"
+                    src="https://www.youtube.com/embed/zHTch03sa1w?si=0btq1JZtOscivjlB"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Alien: Romulus</th>
+                <td>16 août 2024</td>
+                <td>3</td>
+                <td>
+                  <iframe
+                    width="250"
+                    src="https://www.youtube.com/embed/OzY2r2JXsDM?si=3xWhPhlyx5eSZKz1"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Deadpool & Wolverine</th>
+                <td>26 juillet 2024</td>
+                <td>4</td>
+                <td>
+                  <iframe
+                    width="250"
+                    src="https://www.youtube.com/embed/73_1biulkYk?si=Ts1JS978QtoF2d2M"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Trap</th>
+                <td>2 août 2024</td>
+                <td>5</td>
+                <td>
+                  <iframe
+                    width="250"
+                    src="https://www.youtube.com/embed/hJiPAJKjUVg?si=MjHYrp3fAIOGrEKr"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="series" class="container">
+        <h2>LES RÉCENTES SÉRIES</h2>
+        <ul class="grid-series">
+          <li class="transition carte">
+            <img
+              class="transition2"
+              src="img/stranger-things.png"
+              alt="stranger-things"
+            />
+
+            <h3>Stranger Things</h3>
+
+            <p>
+              Des enfants dans une petite ville des années 80 cherchent leur ami
+              disparu et découvrent un monde parallèle. Ils rencontrent Eleven,
+              une fille aux pouvoirs spéciaux, et affrontent des créatures
+              terrifiantes. Ensemble, ils luttent contre des dangers surnaturels
+              et des complots gouvernementaux.
+            </p>
+          </li>
+
+          <li class="transition carte">
+            <img
+              class="transition2"
+              src="img/breaking-bad.png"
+              alt="breaking-bad"
+            />
+
+            <h3>Breaking Bad</h3>
+
+            <p>
+              Un professeur de chimie devenu fabricant de méthamphétamine,
+              Walter White, se lance dans le trafic de drogue pour sécuriser
+              l'avenir financier de sa famille après un diagnostic de cancer.
+              Avec l'aide de son ancien élève Jesse Pinkman, il entre dans un
+              monde dangereux de criminalité. La série explore sa transformation
+              de citoyen respectueux de la loi en un redoutable baron de la
+              drogue.
+            </p>
+          </li>
+
+          <li class="transition carte">
+            <img
+              class="transition2"
+              src="img/la-casa-de-papel.png"
+              alt="la-casa-de-papel"
+            />
+
+            <h3>La Casa De Papel</h3>
+
+            <p>
+              Un groupe de criminels, dirigé par un personnage mystérieux appelé
+              le Professeur, planifie et exécute des braquages audacieux sur la
+              Monnaie royale d'Espagne et la Banque d'Espagne. Ils prennent en
+              otage les employés et les visiteurs pour imprimer des millions
+              d'euros, tout en manipulant les forces de l'ordre et les médias.
+              La série mêle tension, drame et romance, révélant des secrets
+              personnels et des alliances imprévues au cours de ces opérations
+              complexes.
+            </p>
+          </li>
+
+          <li class="transition carte">
+            <img
+              class="transition2"
+              src="img/better-call-saul.png"
+              alt="better-call-saul"
+            />
+
+            <h3>Better Call Saul</h3>
+
+            <p>
+              Better Call Saul suit l'évolution de Jimmy McGill, un avocat au
+              passé trouble, qui se transforme progressivement en Saul Goodman,
+              l'avocat véreux de Breaking Bad. La série explore ses relations
+              compliquées avec son frère Chuck, son ambition professionnelle, et
+              ses efforts pour se faire un nom dans le monde du droit. Tout en
+              dépeignant sa lutte morale et ses choix douteux, elle montre
+              comment il se retrouve impliqué dans le milieu criminel.
+            </p>
+          </li>
+
+          <li class="transition carte">
+            <img class="transition2" src="img/the-100.png" alt="the-100" />
+
+            <h3>The 100</h3>
+
+            <p>
+              Après une apocalypse nucléaire, 100 jeunes délinquants sont
+              envoyés sur Terre depuis une station spatiale pour vérifier si la
+              planète est habitable. Ils découvrent un monde dangereux peuplé de
+              survivants et de créatures hostiles. La série suit leur lutte pour
+              survivre et s'adapter à ce nouvel environnement.
+            </p>
+          </li>
+
+          <li class="transition carte">
+            <img
+              class="transition2"
+              src="img/himym.png"
+              alt="how-i-met-your-mother"
+            />
+
+            <h3>How I Met Your Mother</h3>
+
+            <p>
+              How I Met Your Mother raconte les aventures de Ted Mosby à New
+              York et ses relations avec ses amis Marshall, Lily, Barney et
+              Robin, tout en dévoilant progressivement l'histoire de comment il
+              a rencontré la mère de ses enfants. La série mélange humour,
+              romance et drame.
+            </p>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p class="container">
+        Alexandre Roy | ©Copyright 2024 | 05B - Travail 1 | SASS, Animation CSS
+        et normes d'accessibilité
+      </p>
+      <a class="arrow" href="index.html"
+        ><span class="texte-pour-lecteur">Retour en haut de la page</span
+        ><i class="bi bi-arrow-up-square"></i
+      ></a>
+    </footer>
+  </body>
+</html>
